@@ -10,4 +10,4 @@ def predict_attrition(input_df: pd.DataFrame) -> str:
     model = load_model()
     prediction = model.predict(processed_df)
 
-    return prediction[0]
+    return prediction

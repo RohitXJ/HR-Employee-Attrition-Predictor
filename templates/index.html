@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="antialiased">
-    <div class="w-full max-w-lg p-8 rounded-lg shadow-xl card-gradient-bg border border-gray-100">
+    <div class="w-full max-w-2xl p-8 rounded-lg shadow-xl card-gradient-bg border border-gray-100">
         <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Attrition Data Input</h1>
 
-        <form id="attritionForm" class="space-y-6">
-            <!-- Numerical Input Example: Age -->
+        <form id="attritionForm" class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-6">
+            <!-- Numerical Input: Age -->
             <div>
-                <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Age</label>
+                <label for="Age" class="block text-sm font-medium text-gray-700 mb-1">Age</label>
                 <input
                     type="number"
-                    id="age"
-                    name="age"
+                    id="Age"
+                    name="Age"
                     placeholder="e.g., 30"
                     class="form-input"
                     min="18"
@@ -29,44 +29,87 @@
                 >
             </div>
 
-            <!-- Select Input Example: Department -->
+            <!-- Select Input: BusinessTravel -->
             <div>
-                <label for="department" class="block text-sm font-medium text-gray-700 mb-1">Department</label>
+                <label for="BusinessTravel" class="block text-sm font-medium text-gray-700 mb-1">Business Travel</label>
                 <select
-                    id="department"
-                    name="department"
+                    id="BusinessTravel"
+                    name="BusinessTravel"
                     class="form-select"
                     required
                 >
-                    <option value="">Select Department</option>
-                    <option value="Research & Development">Research & Development</option>
-                    <option value="Sales">Sales</option>
-                    <option value="Human Resources">Human Resources</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Finance">Finance</option>
+                    <option value="">Select Travel Frequency</option>
+                    <option value="Travel_Rarely">Travel Rarely</option>
+                    <option value="Travel_Frequently">Travel Frequently</option>
+                    <option value="Non-Travel">Non-Travel</option>
                 </select>
             </div>
 
-            <!-- Numerical Input Example: Years at Company -->
+            <!-- Numerical Input: DailyRate -->
             <div>
-                <label for="yearsAtCompany" class="block text-sm font-medium text-gray-700 mb-1">Years at Company</label>
+                <label for="DailyRate" class="block text-sm font-medium text-gray-700 mb-1">Daily Rate</label>
                 <input
                     type="number"
-                    id="yearsAtCompany"
-                    name="yearsAtCompany"
-                    placeholder="e.g., 5"
+                    id="DailyRate"
+                    name="DailyRate"
+                    placeholder="e.g., 1000"
                     class="form-input"
                     min="0"
                     required
                 >
             </div>
 
-            <!-- Select Input Example: Education Field -->
+            <!-- Select Input: Department -->
             <div>
-                <label for="educationField" class="block text-sm font-medium text-gray-700 mb-1">Education Field</label>
+                <label for="Department" class="block text-sm font-medium text-gray-700 mb-1">Department</label>
                 <select
-                    id="educationField"
-                    name="educationField"
+                    id="Department"
+                    name="Department"
+                    class="form-select"
+                    required
+                >
+                    <option value="">Select Department</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Research & Development">Research & Development</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </div>
+
+            <!-- Numerical Input: DistanceFromHome -->
+            <div>
+                <label for="DistanceFromHome" class="block text-sm font-medium text-gray-700 mb-1">Distance From Home (Miles)</label>
+                <input
+                    type="number"
+                    id="DistanceFromHome"
+                    name="DistanceFromHome"
+                    placeholder="e.g., 10"
+                    class="form-input"
+                    min="1"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: Education -->
+            <div>
+                <label for="Education" class="block text-sm font-medium text-gray-700 mb-1">Education Level</label>
+                <input
+                    type="number"
+                    id="Education"
+                    name="Education"
+                    placeholder="e.g., 3 (1-5)"
+                    class="form-input"
+                    min="1"
+                    max="5"
+                    required
+                >
+            </div>
+
+            <!-- Select Input: EducationField -->
+            <div>
+                <label for="EducationField" class="block text-sm font-medium text-gray-700 mb-1">Education Field</label>
+                <select
+                    id="EducationField"
+                    name="EducationField"
                     class="form-select"
                     required
                 >
@@ -80,8 +123,251 @@
                 </select>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Numerical Input: EnvironmentSatisfaction -->
             <div>
+                <label for="EnvironmentSatisfaction" class="block text-sm font-medium text-gray-700 mb-1">Environment Satisfaction (1-4)</label>
+                <input
+                    type="number"
+                    id="EnvironmentSatisfaction"
+                    name="EnvironmentSatisfaction"
+                    placeholder="e.g., 3"
+                    class="form-input"
+                    min="1"
+                    max="4"
+                    required
+                >
+            </div>
+
+            <!-- Select Input: Gender -->
+            <div>
+                <label for="Gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                <select
+                    id="Gender"
+                    name="Gender"
+                    class="form-select"
+                    required
+                >
+                    <option value="">Select Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+
+            <!-- Numerical Input: HourlyRate -->
+            <div>
+                <label for="HourlyRate" class="block text-sm font-medium text-gray-700 mb-1">Hourly Rate</label>
+                <input
+                    type="number"
+                    id="HourlyRate"
+                    name="HourlyRate"
+                    placeholder="e.g., 70"
+                    class="form-input"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: JobInvolvement -->
+            <div>
+                <label for="JobInvolvement" class="block text-sm font-medium text-gray-700 mb-1">Job Involvement (1-4)</label>
+                <input
+                    type="number"
+                    id="JobInvolvement"
+                    name="JobInvolvement"
+                    placeholder="e.g., 3"
+                    class="form-input"
+                    min="1"
+                    max="4"
+                    required
+                >
+            </div>
+
+            <!-- Select Input: JobRole -->
+            <div>
+                <label for="JobRole" class="block text-sm font-medium text-gray-700 mb-1">Job Role</label>
+                <select
+                    id="JobRole"
+                    name="JobRole"
+                    class="form-select"
+                    required
+                >
+                    <option value="">Select Job Role</option>
+                    <option value="Sales Executive">Sales Executive</option>
+                    <option value="Research Scientist">Research Scientist</option>
+                    <option value="Laboratory Technician">Laboratory Technician</option>
+                    <option value="Manufacturing Director">Manufacturing Director</option>
+                    <option value="Healthcare Representative">Healthcare Representative</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Sales Representative">Sales Representative</option>
+                    <option value="Research Director">Research Director</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </div>
+
+            <!-- Numerical Input: JobSatisfaction -->
+            <div>
+                <label for="JobSatisfaction" class="block text-sm font-medium text-gray-700 mb-1">Job Satisfaction (1-4)</label>
+                <input
+                    type="number"
+                    id="JobSatisfaction"
+                    name="JobSatisfaction"
+                    placeholder="e.g., 3"
+                    class="form-input"
+                    min="1"
+                    max="4"
+                    required
+                >
+            </div>
+
+            <!-- Select Input: MaritalStatus -->
+            <div>
+                <label for="MaritalStatus" class="block text-sm font-medium text-gray-700 mb-1">Marital Status</label>
+                <select
+                    id="MaritalStatus"
+                    name="MaritalStatus"
+                    class="form-select"
+                    required
+                >
+                    <option value="">Select Marital Status</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                </select>
+            </div>
+
+            <!-- Numerical Input: MonthlyRate -->
+            <div>
+                <label for="MonthlyRate" class="block text-sm font-medium text-gray-700 mb-1">Monthly Rate</label>
+                <input
+                    type="number"
+                    id="MonthlyRate"
+                    name="MonthlyRate"
+                    placeholder="e.g., 15000"
+                    class="form-input"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: NumCompaniesWorked -->
+            <div>
+                <label for="NumCompaniesWorked" class="block text-sm font-medium text-gray-700 mb-1">Number of Companies Worked</label>
+                <input
+                    type="number"
+                    id="NumCompaniesWorked"
+                    name="NumCompaniesWorked"
+                    placeholder="e.g., 2"
+                    class="form-input"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- Select Input: OverTime -->
+            <div>
+                <label for="OverTime" class="block text-sm font-medium text-gray-700 mb-1">Over Time</label>
+                <select
+                    id="OverTime"
+                    name="OverTime"
+                    class="form-select"
+                    required
+                >
+                    <option value="">Select Over Time Status</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <!-- Numerical Input: RelationshipSatisfaction -->
+            <div>
+                <label for="RelationshipSatisfaction" class="block text-sm font-medium text-gray-700 mb-1">Relationship Satisfaction (1-4)</label>
+                <input
+                    type="number"
+                    id="RelationshipSatisfaction"
+                    name="RelationshipSatisfaction"
+                    placeholder="e.g., 3"
+                    class="form-input"
+                    min="1"
+                    max="4"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: StockOptionLevel -->
+            <div>
+                <label for="StockOptionLevel" class="block text-sm font-medium text-gray-700 mb-1">Stock Option Level (0-3)</label>
+                <input
+                    type="number"
+                    id="StockOptionLevel"
+                    name="StockOptionLevel"
+                    placeholder="e.g., 1"
+                    class="form-input"
+                    min="0"
+                    max="3"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: TotalWorkingYears -->
+            <div>
+                <label for="TotalWorkingYears" class="block text-sm font-medium text-gray-700 mb-1">Total Working Years</label>
+                <input
+                    type="number"
+                    id="TotalWorkingYears"
+                    name="TotalWorkingYears"
+                    placeholder="e.g., 10"
+                    class="form-input"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: TrainingTimesLastYear -->
+            <div>
+                <label for="TrainingTimesLastYear" class="block text-sm font-medium text-gray-700 mb-1">Training Times Last Year</label>
+                <input
+                    type="number"
+                    id="TrainingTimesLastYear"
+                    name="TrainingTimesLastYear"
+                    placeholder="e.g., 2"
+                    class="form-input"
+                    min="0"
+                    max="6"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: WorkLifeBalance -->
+            <div>
+                <label for="WorkLifeBalance" class="block text-sm font-medium text-gray-700 mb-1">Work Life Balance (1-4)</label>
+                <input
+                    type="number"
+                    id="WorkLifeBalance"
+                    name="WorkLifeBalance"
+                    placeholder="e.g., 3"
+                    class="form-input"
+                    min="1"
+                    max="4"
+                    required
+                >
+            </div>
+
+            <!-- Numerical Input: YearsAtCompany -->
+            <div>
+                <label for="YearsAtCompany" class="block text-sm font-medium text-gray-700 mb-1">Years at Company</label>
+                <input
+                    type="number"
+                    id="YearsAtCompany"
+                    name="YearsAtCompany"
+                    placeholder="e.g., 5"
+                    class="form-input"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- Submit Button (Full width on small screens, span two columns on medium/large) -->
+            <div class="col-span-2 mt-4">
                 <button
                     type="submit"
                     id="submitButton"
