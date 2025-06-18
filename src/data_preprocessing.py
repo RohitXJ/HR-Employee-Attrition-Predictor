@@ -13,7 +13,7 @@ def process_data(df:pd.DataFrame) -> pd.DataFrame:
     loaded_encoders = {}
 
     col_to_scale = ["Age","DailyRate","DistanceFromHome","HourlyRate","MonthlyRate","TotalWorkingYears","YearsAtCompany"]
-    col_to_encode = ['Attrition', 'BusinessTravel', 'Department', 'EducationField', 'Gender','JobRole', 'MaritalStatus', 'OverTime']
+    col_to_encode = ['BusinessTravel', 'Department', 'EducationField', 'Gender','JobRole', 'MaritalStatus', 'OverTime']
     # Encoding categorical columns
     try:
         for col_name in col_to_encode:
