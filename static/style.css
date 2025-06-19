@@ -1,0 +1,152 @@
+/* Custom font for a professional look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Keyframes for a more visible, moving background gradient */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Updated background with stronger, animated gradient colors */
+    /* More distinct light cool tones for better visibility of movement */
+    background: linear-gradient(135deg, #d8f3f3, #b2e8e8, #8bcac8, #60afad); 
+    background-size: 800% 800%; /* Increased size for more expansive, obvious movement */
+    animation: gradient-animation 25s ease infinite; /* Slower, smoother continuous animation */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll from animation */
+}
+
+/* Subtle gradient for the main card background */
+.card-gradient-bg {
+    background: linear-gradient(145deg, #ffffff, #fbfbfb); /* Brighter white gradient */
+    border-radius: 16px; /* Even more rounded corners for softer look */
+    /* Enhanced, multi-layered shadow for depth */
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15), /* Larger, darker shadow */
+        0 8px 25px rgba(0, 0, 0, 0.1),  /* Medium shadow */
+        inset 0 0 15px rgba(255, 255, 255, 0.6); /* Inner light shadow for a soft, almost glowing edge */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-gradient-bg:hover {
+    transform: translateY(-5px); /* Slight lift on hover for the whole card */
+    box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.2), 
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        inset 0 0 20px rgba(255, 255, 255, 0.8); /* Brighter inner glow on hover */
+}
+
+
+/* Gradient for the submit button */
+.button-gradient-bg {
+    background: linear-gradient(90deg, #505cdd, #7c3aed); /* Slightly bolder indigo to violet */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+    border-radius: 10px; /* Consistent rounded corners */
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.35); /* Stronger initial shadow */
+    letter-spacing: 0.05em; /* Slightly spaced out text */
+}
+
+.button-gradient-bg:hover {
+    transform: translateY(-4px) scale(1.01); /* More pronounced lift and slight scale */
+    box-shadow: 
+        0 12px 25px rgba(99, 102, 241, 0.6), /* Stronger primary glow */
+        0 0 40px rgba(123, 76, 237, 0.4); /* Wider, softer secondary glow */
+    filter: brightness(1.15); /* More noticeable brightness on hover */
+}
+
+.button-gradient-bg:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25); /* Subtle active shadow */
+}
+
+/* Common styles for form inputs (numerical and select) */
+.form-input,
+.form-select {
+    @apply mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400;
+    transition: all 0.25s ease-in-out; /* Smooth transition for focus effects */
+    border-radius: 10px; /* Consistent rounded corners */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* Subtle initial shadow for inputs */
+    padding-left: 1rem; /* Consistent padding */
+    padding-right: 1rem;
+}
+
+/* Focus styles for inputs and selects */
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #6366f1; /* Tailwind indigo-500 */
+    /* More dynamic focus shadow with a subtle inner glow */
+    box-shadow: 
+        0 0 0 5px rgba(99, 102, 241, 0.35), /* Wider, more prominent glow */
+        0 2px 12px rgba(99, 102, 241, 0.2), /* Soft vertical shadow */
+        inset 0 0 5px rgba(99, 102, 241, 0.1); /* Very subtle inner glow */
+    transform: translateY(-2px); /* More pronounced lift on focus */
+}
+
+/* Styles for message box (success/error/loading) */
+#messageBox {
+    transition: all 0.4s ease-in-out; /* Animate message box appearance/disappearance */
+    border-radius: 10px; /* Consistent rounded corners */
+}
+
+#messageBox.success {
+    background-color: #d1fae5; /* green-100 */
+    border-color: #a7f3d0; /* green-200 */
+    color: #065f46; /* green-700 */
+}
+
+#messageBox.error {
+    background-color: #fee2e2; /* red-100 */
+    border-color: #fecaca; /* red-200 */
+    color: #991b1b; /* red-700 */
+}
+
+#messageBox.loading {
+    background-color: #e0f7fa; /* Light cyan for loading */
+    border-color: #b2ebf2; /* cyan-200 */
+    color: #00838f; /* cyan-800 */
+    animation: pulse 1.5s infinite ease-in-out; /* Pulsing effect for loading */
+}
+
+/* Keyframes for pulsing loading message */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.95; } /* Slightly larger pulse */
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Styles for prediction result box */
+#predictionResultBox {
+    transition: all 0.6s ease-out; /* Slower, smoother transition for result box appearance */
+    border-radius: 16px; /* Consistent rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    transform: translateY(15px); /* Start further below, then move up */
+    opacity: 0; /* Start hidden for animation */
+}
+
+#predictionResultBox:not(.hidden) {
+    opacity: 1; /* Fade in when not hidden */
+    transform: translateY(0); /* Move to original position */
+}
+
+#predictionResultBox.positive {
+    background: linear-gradient(135deg, #ccefd2, #e0ffe0); /* Brighter, more vibrant green */
+    color: #155724; /* Darker text for contrast */
+    border: 1px solid #8ac599;
+}
+
+#predictionResultBox.negative {
+    background: linear-gradient(135deg, #f5c6cb, #ffebeb); /* Brighter, more vibrant red */
+    color: #721c24;
+    border: 1px solid #d9808d;
+}
