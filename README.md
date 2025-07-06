@@ -140,3 +140,21 @@ This project is developed purely for educational and demo purposes.
 ## 🙏 Acknowledgement
 
 Thanks to the Kaggle dataset providers and the open-source ML community for tools and resources that made this project possible.
+
+---
+
+## 📊 Power BI Dashboard
+
+This repository also includes a fully interactive Power BI dashboard analyzing the same dataset used in the ML model.
+
+📁 **File**: [Employee_Attrition_Dashboard.pbix](./Employee_Attrition_Dashboard.pbix)
+
+### Highlights:
+- 📌 KPI Cards for Total Employees, Attrition Count, Retention Rate, and Average Tenure
+- 🧩 Attrition breakdown by Department, Overtime Status, Education Field, and Job Satisfaction
+- 📊 Clustered charts for Age vs Attrition and Overtime Impact
+- 📅 Filter slicers for Gender and Marital Status
+
+This dashboard offers a visual storytelling layer on top of the ML prediction engine and is helpful for HR managers and stakeholders.
+
+
