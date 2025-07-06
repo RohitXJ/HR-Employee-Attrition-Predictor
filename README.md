@@ -148,6 +148,7 @@ Thanks to the Kaggle dataset providers and the open-source ML community for tool
 This repository also includes a fully interactive Power BI dashboard analyzing the same dataset used in the ML model.
 
 📁 **File**: [Employee_Attrition_Dashboard.pbix](./Employee_Attrition_Dashboard.pbix)
+  ##Dashboard Preview
 ![Dashboard Preview](C:\Users\USER\Pictures\Screenshots\DASHBOARD PREVIEW.png)
 
 
