@@ -149,7 +149,7 @@ This repository also includes a fully interactive Power BI dashboard analyzing t
 
 📁 **File**: [Employee_Attrition_Dashboard.pbix](./Employee_Attrition_Dashboard.pbix)
 
-##Dashboard Preview 
+## Dashboard Preview 
   
 ![Dashboard Preview](DASHBOARD%20PREVIEW.png)
 
