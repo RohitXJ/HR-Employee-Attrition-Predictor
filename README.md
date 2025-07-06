@@ -151,7 +151,7 @@ This repository also includes a fully interactive Power BI dashboard analyzing t
 
 ##Dashboard Preview 
   
-![Dashboard Preview](./DASHBOARD_PREVIEW.png)
+![Dashboard Preview](DASHBOARD%20PREVIEW.png)
 
 
 ### Highlights:
